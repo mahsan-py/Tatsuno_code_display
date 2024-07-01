@@ -317,6 +317,29 @@ namespace WindowsFormsApp12345
 
         }
 
+        private void delete_data_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM `nozzel1` WHERE SLip_ID >= 0;";
+            string connectionString = "Server=localhost;Database=munir_filling;Uid=root;Pwd=";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(query, connection);
+                int rowsAffected = command.ExecuteNonQuery();
+                MessageBox.Show($"{rowsAffected} rows deleted.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
 
         private void paginationsetup_Click(object sender, EventArgs e)
         {

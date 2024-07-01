@@ -71,6 +71,7 @@
             this.DateTimeShiftReport = new System.Windows.Forms.Button();
             this.date_search = new System.Windows.Forms.Button();
             this.paginationsetup = new System.Windows.Forms.Button();
+            this.delete_data = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -370,10 +371,19 @@
             this.paginationsetup.Name = "paginationsetup";
             this.paginationsetup.UseVisualStyleBackColor = false;
             // 
+            // delete_data
+            // 
+            this.delete_data.BackColor = System.Drawing.Color.IndianRed;
+            resources.ApplyResources(this.delete_data, "delete_data");
+            this.delete_data.Name = "delete_data";
+            this.delete_data.UseVisualStyleBackColor = false;
+            this.delete_data.Click += new System.EventHandler(this.delete_data_Click);
+            // 
             // database
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.delete_data);
             this.Controls.Add(this.paginationsetup);
             this.Controls.Add(this.DateTimeShiftReport);
             this.Controls.Add(this.date_search);
@@ -464,5 +474,6 @@
         private System.Windows.Forms.Button DateTimeShiftReport;
         private System.Windows.Forms.Button date_search;
         private System.Windows.Forms.Button paginationsetup;
+        private System.Windows.Forms.Button delete_data;
     }
 }
